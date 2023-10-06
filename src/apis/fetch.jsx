@@ -1,11 +1,19 @@
 const API_KEY = 'W6JHW76GGdZGdKvqcZbnzHDYFk0uFc9bUWBIeSHf';
-const API_URL = 'https://api.nasa.gov/planetary/apod?api_key=';
+const API_URL = 'https://api.nasa.gov/planetary/apod';
 
+export default async function fetchNASAData(urlParams) {
+    try {
+        const response = await fetch(
+            `${API_URL}?api_key=${API_KEY}${
+                typeof urlParams !== 'undefined' && urlParams?.length > 0 
+                ? urlParams 
+                : ''
+            }`
+        );
+        const data = await response.json();
 
-export default asinc = ()=>{
-    try{
-        const response  = await fetch(`${API_URL}${API_KEY}`)
-    }catch(error);{
-
+        return Promise.resolve(data);
+    } catch (error) {
+        return Promise.reject(error);
     }
 }
