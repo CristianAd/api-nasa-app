@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import fetchNASAData from "../apis/fetch";
 import TodayImages from "../components/todayImages";
 import { PostImage } from "../types";
+import todayImages from "../components/todayImages";
  
 
 
@@ -30,7 +31,7 @@ const Home = ()=>{
     return(
         <View style={styles.container}>
             <Header> </Header>
-            <TodayImages ></TodayImages>
+            <TodayImages  ></TodayImages>
         </View>
     )
 }
