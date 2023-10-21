@@ -1,12 +1,12 @@
 
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-
+import Routes from './src/routes/routes';
 
 import Home from './src/Views/Home';
 function App() {
   return (
       <SafeAreaView style={styles.container}>
-            <Home></Home>
+            <Routes></Routes>
       </SafeAreaView>
   );
 }
